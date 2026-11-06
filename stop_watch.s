@@ -159,8 +159,8 @@ UPDATE_DISPLAY:
     * LED 上位4文字 (`LED7`〜`LED4`) に現在の計測タイムを表示
     move.b  TIME_MSG+0, LED7
     move.b  TIME_MSG+1, LED6
-    move.b  TIME_MSG+2, LED5
-    move.b  TIME_MSG+3, LED4
+    move.b  TIME_MSG+3, LED5
+    move.b  TIME_MSG+4, LED4
 
     movem.l (%SP)+, %D0-%D3/%A0-%A1
     rts
@@ -229,8 +229,8 @@ PRINT_LAP_MSG:
 UPDATE_LED_LAP:
     move.b  LAP_MSG+5, LED3
     move.b  LAP_MSG+6, LED2
-    move.b  LAP_MSG+7, LED1         | ':'
-    move.b  LAP_MSG+8, LED0
+    move.b  LAP_MSG+8, LED1         | ':'
+    move.b  LAP_MSG+9, LED0
     rts
 
 
