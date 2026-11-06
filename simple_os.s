@@ -184,20 +184,20 @@ boot:
 ****************************************************************
 .section .text
 .even
-MAIN:
+**MAIN:
 	** 走行モードとレベルの設定 (「ユーザモード」への移行処理)
-	move.w	#0x0000, %SR            | USER MODE, LEVEL 0
-	lea.l	USR_STK_TOP,%SP         | user stack の設定
+**	move.w	#0x0000, %SR            | USER MODE, LEVEL 0
+**	lea.l	USR_STK_TOP,%SP         | user stack の設定
 
 	** システムコールによる RESET_TIMER の起動
-	move.l	#SYSCALL_NUM_RESET_TIMER,%D0
-	trap	#0
+**	move.l	#SYSCALL_NUM_RESET_TIMER,%D0
+**	trap	#0
 
 	** システムコールによる SET_TIMER の起動
-	move.l	#SYSCALL_NUM_SET_TIMER, %D0
-	move.w	#50000, %D1
-	move.l	#TT,    %D2
-	trap	#0
+**	move.l	#SYSCALL_NUM_SET_TIMER, %D0
+**	move.w	#50000, %D1
+**	move.l	#TT,    %D2
+**	trap	#0
 
 ******************************
 * sys_GETSTRING, sys_PUTSTRING のテスト
@@ -243,7 +243,7 @@ TTEND:
 	rts
 
 ****************************************************************
-*** 初期値のあるデータ領域
+*** 初期値のあMるデータ領域
 ****************************************************************
 .section .data
 TMSG:
