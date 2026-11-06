@@ -260,3 +260,8 @@ LAP_SEC:        .ds.w   1           | ラップ 秒
 SEC_UPDATED_FLAG: .ds.w 1
 
 INP_BUF:        .ds.b   4           | キー入力用バッファ
+.even
+USR_STK:
+    .ds.b   0x4000
+.even
+USR_STK_TOP:
