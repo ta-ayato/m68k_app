@@ -15,6 +15,19 @@
 .equ SYSCALL_NUM_RESET_TIMER, 3
 .equ SYSCALL_NUM_SET_TIMER,   4
 
+
+***************
+** LED・スイッチ (付録 A.4.3)
+***************
+	.equ LED7,      IOBASE+0x000002f  | ボード搭載の LED 用レジスタ
+	.equ LED6,      IOBASE+0x000002d  | 左から LED7 〜 LED0
+	.equ LED5,      IOBASE+0x000002b
+	.equ LED4,      IOBASE+0x0000029
+	.equ LED3,      IOBASE+0x000003f
+	.equ LED2,      IOBASE+0x000003d
+	.equ LED1,      IOBASE+0x000003b
+	.equ LED0,      IOBASE+0x0000039
+
 ***************************************************************
 ** MAIN : ユーザプログラムのエントリポイント
 ***************************************************************
